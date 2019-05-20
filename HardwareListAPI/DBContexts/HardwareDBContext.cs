@@ -1,15 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore;
-using HardwareListAPI.Models;
+﻿using HardwareListAPI.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HardwareListAPI.Models
+namespace HardwareListAPI.DBContexts
 {
-    public class DbContexts
+    public class HardwareDBContext : DbContext
     {
-        public DbContexts(DbContextOptions options) : base(options)
+        public HardwareDBContext(DbContextOptions options) : base(options)
         {
 
         }
