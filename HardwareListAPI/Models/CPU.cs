@@ -24,7 +24,7 @@ namespace HardwareListAPI.Models
         public int Frequency { get; set; }
 
         [Required]
-        public int Voltage { get; set; }
+        public float Voltage { get; set; }
 
         [Required]
         public int CinebenchSingleCore { get; set; }
