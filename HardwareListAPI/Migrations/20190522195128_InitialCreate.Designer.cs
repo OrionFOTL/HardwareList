@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HardwareListAPI.Migrations
 {
     [DbContext(typeof(HardwareDBContext))]
-    [Migration("20190521155420_NewDatabase")]
-    partial class NewDatabase
+    [Migration("20190522195128_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
