@@ -16,8 +16,25 @@ namespace HardwareListWebApp.Controllers
             return View();
         }
 
-        [Authorize]
-        public IActionResult Privacy()
+        //[Authorize]
+        //public IActionResult Privacy()
+        //{
+        //    return View();
+        //}
+
+        public IActionResult CPU()
+        {
+            return View();
+        }
+        public IActionResult GPU()
+        {
+            return View();
+        }
+        public IActionResult HDD()
+        {
+            return View();
+        }
+        public IActionResult SSD()
         {
             return View();
         }
