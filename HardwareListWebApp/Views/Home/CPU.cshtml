@@ -4,3 +4,31 @@
 }
 
 <h1>CPU</h1>
+
+
+<div class="row">
+    <div class="form-group col">
+        <label for="cpu_vendorSelect">Vendor</label>
+        <select class="form-control" id="cpu_vendorSelect">
+            <option>Intel</option>
+            <option>AMD</option>
+        </select>
+        <label for="cpu_modelInput">Model</label>
+        <input type="text" class="form-control" id="cpu_modelInput" placeholder="i5-9600K" />
+    </div>
+    <div class="form-group col">
+        <label for="cpu_frequencyInput">Your frequency after overclocking, in GHz</label>
+        <input type="number" class="form-control" id="cpu_frequencyInput" placeholder="4.987" />
+
+        <label for="cpu_voltageInput">Core voltage</label>
+        <input type="number" class="form-control" id="cpu_voltageInput" placeholder="1.405" />
+    </div>
+    <div class="form-group col">
+        <label for="cpu_cinesingleInput">Cinebench Single Core score</label>
+        <input type="number" class="form-control" id="cpu_cinesingleInput" placeholder="14000" />
+
+        <label for="cpu_cinemultiInput">Cinebench Multi Core score</label>
+        <input type="number" class="form-control" id="cpu_cinemultiInput" placeholder="21500" />
+    </div>
+</div>
+<button type="button" class="btn btn-primary">Add</button>
