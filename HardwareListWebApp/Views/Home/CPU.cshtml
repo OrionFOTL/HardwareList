@@ -32,9 +32,9 @@
     </div>
 </div>
 <button type="button" class="btn btn-primary" id="cpu_addBtn">Add</button>
-<script src="~/js/addPartForm.js"></script>
+<script src="~/js/addPartForm.js" asp-append-version="true"></script>
 
-<div class="container">
+<div class="container" id="cpu-container">
     <div class="row bg-light">
         <div class="col-sm">
             Vendor
@@ -58,27 +58,29 @@
             @*Empty column for remove button*@
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm">
-            Intel
+    <div class="row d-none">
+        <div class="col-sm" data-column-type="vendor">
+            
         </div>
-        <div class="col-sm">
-            Model
+        <div class="col-sm" data-column-type="model">
+            
         </div>
-        <div class="col-sm">
-            F
+        <div class="col-sm" data-column-type="frequency">
+            
         </div>
-        <div class="col-sm">
-            V
+        <div class="col-sm" data-column-type="voltage">
+            
         </div>
-        <div class="col-sm">
-            MC
+        <div class="col-sm" data-column-type="cinesingle">
+            
         </div>
-        <div class="col-sm">
-            SC
+        <div class="col-sm" data-column-type="cinemulti">
+            
         </div>
-        <div class="col-sm">
+        <div class="col-sm" data-column-type="">
             <a href="#">Remove</a>
         </div>
     </div>
 </div> 
+
+<script src="~/js/partController.js" asp-append-version="true"></script>

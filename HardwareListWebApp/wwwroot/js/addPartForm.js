@@ -25,7 +25,7 @@
             cinesingleInput.value = ''
             cinemultiInput.value = ''
 
-            this._raiseNewMeasurementAdded(obj)
+            this._raiseNewPartAdded(obj)
         })
     }
 
@@ -33,9 +33,9 @@
         this._listeners.push(listener)
     }
 
-    _raiseNewMeasurementAdded(e) {
+    _raiseNewPartAdded(e) {
         this._listeners.forEach(l => {
-            l.newMeasurementAdded(e)
+            l.newPartAdded(e)
         })
     }
 }
