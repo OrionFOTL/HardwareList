@@ -10,6 +10,8 @@
         let cinesingleColumn = newRow.querySelector('div[data-column-type=\'cinesingle\']')
         let cinemultiColumn = newRow.querySelector('div[data-column-type=\'cinemulti\']')
 
+        let removeBtn = newRow.querySelector('a[data-action=\'remove\']')
+
         vendorColumn.innerText = part.vendor
         modelColumn.innerText = part.model
         frequencyColumn.innerText = part.frequency
@@ -17,7 +19,12 @@
         cinesingleColumn.innerText = part.cinesingle
         cinemultiColumn.innerText = part.cinemulti
 
+        removeBtn.addEventListener('click', e => {
+            newRow.remove()
+        })
+
         newRow.classList.remove('d-none')
         grid.appendChild(newRow)
+
     }
 } 
