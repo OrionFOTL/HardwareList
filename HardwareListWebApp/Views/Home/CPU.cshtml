@@ -13,15 +13,16 @@
             <option>Intel</option>
             <option>AMD</option>
         </select>
+
         <label for="cpu_modelInput">Model</label>
         <input type="text" class="form-control" id="cpu_modelInput" placeholder="i5-9600K" />
     </div>
     <div class="form-group col">
         <label for="cpu_frequencyInput">Your frequency after overclocking, in GHz</label>
-        <input type="number" class="form-control" id="cpu_frequencyInput" placeholder="4.987" />
+        <input type="number" step="0.001" class="form-control" id="cpu_frequencyInput" placeholder="4.987" />
 
         <label for="cpu_voltageInput">Core voltage</label>
-        <input type="number" class="form-control" id="cpu_voltageInput" placeholder="1.405" />
+        <input type="number" step="0.001" class="form-control" id="cpu_voltageInput" placeholder="1.405" />
     </div>
     <div class="form-group col">
         <label for="cpu_cinesingleInput">Cinebench Single Core score</label>
@@ -34,7 +35,7 @@
 <button type="button" class="btn btn-primary" id="cpu_addBtn">Add</button>
 <script src="~/js/addPartForm.js" asp-append-version="true"></script>
 
-<div class="container" id="cpu-container">
+<div class="container" id="cpu_container">
     <div class="row bg-light">
         <div class="col-sm">
             Vendor
@@ -82,5 +83,5 @@
         </div>
     </div>
 </div> 
-
+<script src="~/js/partList.js" asp-append-version="true"></script>
 <script src="~/js/partController.js" asp-append-version="true"></script>
