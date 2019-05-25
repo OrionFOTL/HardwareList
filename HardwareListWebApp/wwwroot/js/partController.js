@@ -29,7 +29,7 @@
             }
 
             postResponseReady(e) {
-                _this._partList.addNewPart(JSON.parse(e.data))
+                _this._partList.addNewPart(JSON.parse(e.part))
             }
         })
 

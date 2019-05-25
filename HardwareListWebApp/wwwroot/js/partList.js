@@ -16,8 +16,8 @@
         modelColumn.innerText = part.model
         frequencyColumn.innerText = part.frequency
         voltageColumn.innerText = part.voltage
-        cinesingleColumn.innerText = part.cinesingle
-        cinemultiColumn.innerText = part.cinemulti
+        cinesingleColumn.innerText = part.cinebenchSingleCore
+        cinemultiColumn.innerText = part.cinebenchMultiCore
 
         removeBtn.addEventListener('click', e => {
             newRow.remove()
