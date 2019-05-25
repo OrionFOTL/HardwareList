@@ -10,7 +10,7 @@
 
         this._addPartForm.addEventListener(new class {
             newPartAdded(e) {
-                _this._partList.addNewPart(e)
+                _this._service.post(e)
             }
         })
 
@@ -26,6 +26,10 @@
                         cinemulti: i.cinebenchMultiCore
                     })
                 })
+            }
+
+            postResponseReady(e) {
+                _this._partList.addNewPart(JSON.parse(e.data))
             }
         })
 
