@@ -21,7 +21,7 @@ namespace HardwareListAPI
             Configuration = configuration;
         }
 
-        private const string MyAllowSpecificOrigins = "_allowSpecificOrigins";
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -52,8 +52,8 @@ namespace HardwareListAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
             app.UseCors(MyAllowSpecificOrigins);
+            app.UseMvc();
         }
     }
 }

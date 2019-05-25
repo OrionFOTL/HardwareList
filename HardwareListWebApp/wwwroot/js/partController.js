@@ -1,8 +1,10 @@
 ﻿class PartController {
 
     constructor() {
+
+        this._service = new PartService('http://localhost:42069/')
         this._addPartForm = new AddPartForm()
-        this._partList = new PartList()
+        this._partList = new PartList() 
 
         let _this = this
 
@@ -11,6 +13,23 @@
                 _this._partList.addNewPart(e)
             }
         })
+
+        this._service.addEventListener(new class {
+            getResponseReady(e) {
+                JSON.parse(e.data).forEach(i => {
+                    _this._partList.addNewPart({
+                        vendor: i.vendor,
+                        model: i.model,
+                        frequency: i.frequency,
+                        voltage: i.voltage,
+                        cinesingle: i.cinebenchSingleCore,
+                        cinemulti: i.cinebenchMultiCore
+                    })
+                })
+            }
+        })
+
+        this._service.get()
     }
 }
 
