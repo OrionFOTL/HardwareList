@@ -35,7 +35,6 @@
 
         req.open('POST', this._serviceUrl)
         req.setRequestHeader("Content-Type", "application/json")
-        let test = JSON.stringify(part)
         req.send(JSON.stringify(part))
     }
 
