@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HardwareListAPI.Migrations
 {
     [DbContext(typeof(HardwareDBContext))]
-    [Migration("20190520143819_InitialCreate")]
+    [Migration("20190522195128_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,7 +34,7 @@ namespace HardwareListAPI.Migrations
                     b.Property<string>("Vendor")
                         .IsRequired();
 
-                    b.Property<int>("Voltage");
+                    b.Property<float>("Voltage");
 
                     b.HasKey("Id");
 
@@ -58,7 +58,7 @@ namespace HardwareListAPI.Migrations
                     b.Property<string>("Vendor")
                         .IsRequired();
 
-                    b.Property<int>("Voltage");
+                    b.Property<float>("Voltage");
 
                     b.HasKey("Id");
 
@@ -70,14 +70,14 @@ namespace HardwareListAPI.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<double>("AccessTime");
+
                     b.Property<string>("Model")
                         .IsRequired();
 
-                    b.Property<string>("Random4K")
-                        .IsRequired();
+                    b.Property<double>("Random4K");
 
-                    b.Property<string>("TransferRate")
-                        .IsRequired();
+                    b.Property<double>("TransferRate");
 
                     b.Property<string>("Vendor")
                         .IsRequired();
@@ -92,14 +92,14 @@ namespace HardwareListAPI.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<double>("AccessTime");
+
                     b.Property<string>("Model")
                         .IsRequired();
 
-                    b.Property<string>("Random4K")
-                        .IsRequired();
+                    b.Property<double>("Random4K");
 
-                    b.Property<string>("TransferRate")
-                        .IsRequired();
+                    b.Property<double>("TransferRate");
 
                     b.Property<string>("Vendor")
                         .IsRequired();

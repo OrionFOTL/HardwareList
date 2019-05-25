@@ -21,9 +21,12 @@ namespace HardwareListAPI.Models
         public string Model { get; set; }
 
         [Required]
-        public string TransferRate { get; set; }
+        public double TransferRate { get; set; }
 
         [Required]
-        public string Random4K { get; set; }
+        public double Random4K { get; set; }
+
+        [Required]
+        public double AccessTime { get; set; }
     }
 }

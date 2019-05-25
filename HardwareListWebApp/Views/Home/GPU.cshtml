@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "GPU";
+}
+
+<h1>GPU</h1>
+
+<div class="row">
+    <div class="form-group col">
+        <label for="gpu_vendorSelect">Vendor</label>
+        <select class="form-control" id="gpu_vendorSelect">
+            <option>AMD</option>
+            <option>nVidia</option>
+        </select>
+        <label for="gpu_modelInput">Model</label>
+        <input type="text" class="form-control" id="gpu_modelInput" placeholder="EVGA GTX 1650 SC Ultra Black 4 GB" />
+    </div>
+    <div class="form-group col">
+        <label for="gpu_coreclockInput">Core clock in MHz</label>
+        <input type="number" class="form-control" id="gpu_coreclockInput" placeholder="1485" />
+
+        <label for="gpu_memoryclockInput">Memory clock</label>
+        <input type="number" class="form-control" id="gpu_memoryclockInput" placeholder="2000" />
+    </div>
+    <div class="form-group col">
+        <label for="gpu_voltageInput">Core voltage</label>
+        <input type="number" class="form-control" id="gpu_voltageInput" placeholder="1.05" />
+
+        <label for="gpu_FireStrikeInput">3DMark FireStrike GPU Score</label>
+        <input type="number" class="form-control" id="gpu_FireStrikeInput" placeholder="18543" />
+    </div>
+</div>
+<button type="button" class="btn btn-primary">Add</button>

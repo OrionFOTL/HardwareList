@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.645
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28917.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardwareListAPI", "HardwareListAPI\HardwareListAPI.csproj", "{1F8A7CC3-CCC4-48A2-B79F-05F0B087D646}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardwareListAPI", "HardwareListAPI\HardwareListAPI.csproj", "{1F8A7CC3-CCC4-48A2-B79F-05F0B087D646}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardwareListWebClient", "HardwareListWebClient\HardwareListWebClient.csproj", "{FF9393CA-D267-4A51-BAB9-6FCD48973543}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardwareListWebApp", "HardwareListWebApp\HardwareListWebApp.csproj", "{CCB4071B-812C-4D30-B86D-C000E8EEBBD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{1F8A7CC3-CCC4-48A2-B79F-05F0B087D646}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F8A7CC3-CCC4-48A2-B79F-05F0B087D646}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F8A7CC3-CCC4-48A2-B79F-05F0B087D646}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FF9393CA-D267-4A51-BAB9-6FCD48973543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF9393CA-D267-4A51-BAB9-6FCD48973543}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF9393CA-D267-4A51-BAB9-6FCD48973543}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF9393CA-D267-4A51-BAB9-6FCD48973543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCB4071B-812C-4D30-B86D-C000E8EEBBD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCB4071B-812C-4D30-B86D-C000E8EEBBD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCB4071B-812C-4D30-B86D-C000E8EEBBD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCB4071B-812C-4D30-B86D-C000E8EEBBD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

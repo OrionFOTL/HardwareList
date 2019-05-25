@@ -15,7 +15,7 @@ namespace HardwareListAPI.Migrations
                     Vendor = table.Column<string>(nullable: false),
                     Model = table.Column<string>(nullable: false),
                     Frequency = table.Column<int>(nullable: false),
-                    Voltage = table.Column<int>(nullable: false),
+                    Voltage = table.Column<float>(nullable: false),
                     CinebenchSingleCore = table.Column<int>(nullable: false),
                     CinebenchMultiCore = table.Column<int>(nullable: false)
                 },
@@ -34,7 +34,7 @@ namespace HardwareListAPI.Migrations
                     Model = table.Column<string>(nullable: false),
                     CoreClock = table.Column<int>(nullable: false),
                     MemoryClock = table.Column<int>(nullable: false),
-                    Voltage = table.Column<int>(nullable: false),
+                    Voltage = table.Column<float>(nullable: false),
                     FireStrikeScore = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -50,8 +50,9 @@ namespace HardwareListAPI.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Vendor = table.Column<string>(nullable: false),
                     Model = table.Column<string>(nullable: false),
-                    TransferRate = table.Column<string>(nullable: false),
-                    Random4K = table.Column<string>(nullable: false)
+                    TransferRate = table.Column<double>(nullable: false),
+                    Random4K = table.Column<double>(nullable: false),
+                    AccessTime = table.Column<double>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -66,8 +67,9 @@ namespace HardwareListAPI.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Vendor = table.Column<string>(nullable: false),
                     Model = table.Column<string>(nullable: false),
-                    TransferRate = table.Column<string>(nullable: false),
-                    Random4K = table.Column<string>(nullable: false)
+                    TransferRate = table.Column<double>(nullable: false),
+                    Random4K = table.Column<double>(nullable: false),
+                    AccessTime = table.Column<double>(nullable: false)
                 },
                 constraints: table =>
                 {

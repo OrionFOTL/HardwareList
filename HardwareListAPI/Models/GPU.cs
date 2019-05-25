@@ -27,7 +27,7 @@ namespace HardwareListAPI.Models
         public int MemoryClock { get; set; }
 
         [Required]
-        public int Voltage { get; set; }
+        public float Voltage { get; set; }
 
         [Required]
         public int FireStrikeScore { get; set; }
