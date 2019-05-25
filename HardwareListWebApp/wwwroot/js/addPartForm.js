@@ -15,8 +15,8 @@
                 model: modelInput.value,
                 frequency: frequencyInput.value,
                 voltage: voltageInput.value,
-                cinesingle: cinesingleInput.value,
-                cinemulti: cinemultiInput.value
+                cinebenchSingleCore: cinesingleInput.value,
+                cinebenchMultiCore: cinemultiInput.value
             }
 
             modelInput.value = ''
