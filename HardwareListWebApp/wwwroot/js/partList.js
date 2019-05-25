@@ -1,8 +1,14 @@
 ﻿class PartList {
+
+    constructor() {
+        _counter = 0
+    }
+
     addNewPart(part) {
         let grid = document.querySelector('#cpu_container')
         let newRow = grid.children[1].cloneNode(true)
 
+        let localIdColumn = newRow.querySelector('div[data-column-type=\'internalId\']')
         let vendorColumn = newRow.querySelector('div[data-column-type=\'vendor\']')
         let modelColumn = newRow.querySelector('div[data-column-type=\'model\']')
         let frequencyColumn = newRow.querySelector('div[data-column-type=\'frequency\']')
@@ -12,6 +18,7 @@
 
         let removeBtn = newRow.querySelector('a[data-action=\'remove\']')
 
+        localIdColumn.innerText = this._counter++
         vendorColumn.innerText = part.vendor
         modelColumn.innerText = part.model
         frequencyColumn.innerText = part.frequency
@@ -25,6 +32,5 @@
 
         newRow.classList.remove('d-none')
         grid.appendChild(newRow)
-
     }
 } 

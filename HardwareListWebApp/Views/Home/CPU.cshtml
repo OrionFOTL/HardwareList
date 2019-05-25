@@ -33,6 +33,8 @@
     </div>
 </div>
 <button type="button" class="btn btn-primary" id="cpu_addBtn">Add</button>
+<button type="button" class="btn btn-primary" id="cpu_saveBtn">Add</button>
+<button type="button" class="btn btn-primary" id="cpu_cancelBtn">Add</button>
 <script src="~/js/addPartForm.js" asp-append-version="true"></script>
 
 <div class="container" id="cpu_container">
@@ -56,27 +58,37 @@
             CR15 Multicore
         </div>
         <div class="col-sm">
+            @*Empty column for edit button*@
+        </div>
+        <div class="col-sm">
             @*Empty column for remove button*@
         </div>
+
     </div>
-    <div class="row d-none">
+    <div class="row d-none" data-row-type="template">
+        <div class="col-sm d-none" data-column-type="internalId">
+
+        </div>
         <div class="col-sm" data-column-type="vendor">
-            
+
         </div>
         <div class="col-sm" data-column-type="model">
-            
+
         </div>
         <div class="col-sm" data-column-type="frequency">
-            
+
         </div>
         <div class="col-sm" data-column-type="voltage">
-            
+
         </div>
         <div class="col-sm" data-column-type="cinesingle">
-            
+
         </div>
         <div class="col-sm" data-column-type="cinemulti">
-            
+
+        </div>
+        <div class="col-sm" data-column-type="">
+            <a href="#" data-action="edit">Edit</a>
         </div>
         <div class="col-sm" data-column-type="">
             <a href="#" data-action="remove">Remove</a>
