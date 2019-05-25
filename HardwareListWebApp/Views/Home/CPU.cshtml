@@ -33,8 +33,8 @@
     </div>
 </div>
 <button type="button" class="btn btn-primary" id="cpu_addBtn">Add</button>
-<button type="button" class="btn btn-primary" id="cpu_saveBtn">Add</button>
-<button type="button" class="btn btn-primary" id="cpu_cancelBtn">Add</button>
+<button type="button" class="btn btn-primary d-none" id="cpu_saveBtn">Save</button>
+<button type="button" class="btn btn-primary d-none" id="cpu_cancelBtn">Cancel</button>
 <script src="~/js/addPartForm.js" asp-append-version="true"></script>
 
 <div class="container" id="cpu_container">
@@ -65,8 +65,8 @@
         </div>
 
     </div>
-    <div class="row d-none" data-row-type="template">
-        <div class="col-sm d-none" data-column-type="internalId">
+    <div class="row d-none" data-row-type="template" data-internal-id="">
+        <div class="col-sm d-none" data-column-type="id">
 
         </div>
         <div class="col-sm" data-column-type="vendor">
