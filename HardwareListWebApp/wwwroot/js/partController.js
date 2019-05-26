@@ -44,6 +44,7 @@
 
         this._service.addEventListener(new class {
             getResponseReady(e) {
+                _this._partList.cleanParts()
                 JSON.parse(e.data).forEach(i => {
                     _this._partList.addNewPart({
                         id: i.id,
@@ -73,7 +74,6 @@
         this._service.get()
 
         var intervalId = window.setInterval(function () {
-            _this._partList.cleanParts()
             _this._service.getLoop()
         }, 6000)
     }
