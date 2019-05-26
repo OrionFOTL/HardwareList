@@ -42,6 +42,7 @@ namespace HardwareListAPI
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<HardwareDBContext>(x => x.UseSqlite(Configuration.GetConnectionString("HardwareDB")));
+            //services.AddDbContext<HardwareDBContext>(x => x.UseSqlServer(Configuration.GetConnectionString("HardwareDB")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
