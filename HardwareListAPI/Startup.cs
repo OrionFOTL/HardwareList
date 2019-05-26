@@ -52,6 +52,7 @@ namespace HardwareListAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseHttpsRedirection();
             app.UseCors(MyAllowSpecificOrigins);
             app.UseMvc();
         }

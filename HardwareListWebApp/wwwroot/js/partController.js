@@ -2,7 +2,7 @@
 
     constructor() {
 
-        this._service = new PartService('http://localhost:42069/')
+        this._service = new PartService('https://localhost:44317/')
         this._addPartForm = new AddPartForm()
         this._partList = new PartList() 
 
