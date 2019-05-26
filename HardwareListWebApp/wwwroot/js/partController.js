@@ -71,6 +71,11 @@
         })
 
         this._service.get()
+
+        var intervalId = window.setInterval(function () {
+            _this._partList.cleanParts()
+            _this._service.getLoop()
+        }, 6000)
     }
 }
 

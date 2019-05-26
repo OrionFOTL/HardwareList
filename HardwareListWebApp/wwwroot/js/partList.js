@@ -106,6 +106,13 @@
         } 
     }
 
+    cleanParts() {
+        let grid = document.querySelector('#cpu_container')
+        while (grid.children.length > 2) {
+            grid.removeChild(grid.lastChild)
+        }
+    }
+
     addEventListener(listener) {
         this._listeners.push(listener);
     }

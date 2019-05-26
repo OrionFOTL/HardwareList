@@ -63,6 +63,10 @@
         req.send(JSON.stringify(data))
     }
 
+    getLoop() {
+        this.get()
+    }
+
     _raiseGetResponseReady(e) {
         this._listeners.forEach(l => {
             l.getResponseReady(e)
