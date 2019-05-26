@@ -111,6 +111,7 @@
         while (grid.children.length > 2) {
             grid.removeChild(grid.lastChild)
         }
+        this._counter = 0
     }
 
     addEventListener(listener) {

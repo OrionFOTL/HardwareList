@@ -2,7 +2,9 @@
 
     constructor() {
         this._listeners = []
-        this._initButtons()
+        if (document.querySelector('#cpu_addBtn')) {
+            this._initButtons()
+        }
     }
 
     addEventListener(listener) {

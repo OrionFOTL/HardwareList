@@ -3,9 +3,14 @@
     ViewData["Title"] = "CPU";
 }
 
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
+
 <h1>CPU</h1>
 
 
+@if (User.Identity.IsAuthenticated)
+{
 <div class="row">
     <div class="form-group col">
         <label for="cpu_vendorSelect">Vendor</label>
@@ -35,6 +40,7 @@
 <button type="button" class="btn btn-primary" id="cpu_addBtn">Add</button>
 <button type="button" class="btn btn-primary d-none" id="cpu_saveBtn">Save</button>
 <button type="button" class="btn btn-primary d-none" id="cpu_cancelBtn">Cancel</button>
+}
 <script src="~/js/addPartForm.js" asp-append-version="true"></script>
 
 <div class="container" id="cpu_container">
@@ -94,7 +100,7 @@
             <a href="#" data-action="remove">Remove</a>
         </div>
     </div>
-</div> 
+</div>
 <script src="~/js/partList.js" asp-append-version="true"></script>
 <script src="~/js/partService.js" asp-append-version="true"></script>
 <script src="~/js/partController.js" asp-append-version="true"></script>
