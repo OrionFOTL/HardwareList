@@ -102,8 +102,16 @@
     </div>
 </div>
 <button type="button" class="btn btn-primary" id="cpu_export">PDF Export</button>
+
+<div id="chartContainer" class="container-fluid">
+    <canvas id="myChart"></canvas>
+</div>
 <script src="~/js/partList.js" asp-append-version="true"></script>
 <script src="~/js/partService.js" asp-append-version="true"></script>
 <script src="~/js/partController.js" asp-append-version="true"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
 <script src="~/js/export.js" asp-append-version="true"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="~/js/chart.js" asp-append-version="true"></script>

@@ -56,6 +56,7 @@
                         cinebenchMultiCore: i.cinebenchMultiCore
                     })
                 })
+                _this._partList.makeGraph()
             }
 
             postResponseReady(e) {

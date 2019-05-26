@@ -114,6 +114,38 @@
         this._counter = 0
     }
 
+    makeGraph() {
+        let rows = document.querySelectorAll('div[data-row-type=\'data\']')
+        let myLabels = []
+        let freqValue = []
+
+        rows.forEach(l => {
+            myLabels.push(l.children[2].innerText)
+            freqValue.push(l.children[3].innerText)
+        })
+
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'bar',
+
+            // The data for our dataset
+            data: {
+                labels: myLabels,
+                datasets: [{
+                    label: 'CPU Frequency',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: freqValue
+                }]
+            },
+
+            // Configuration options go here
+            options: {}
+        });
+
+    }
+
     addEventListener(listener) {
         this._listeners.push(listener);
     }
