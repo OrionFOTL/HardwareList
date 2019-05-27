@@ -47,9 +47,11 @@ namespace HardwareListWebApp
             services.Configure<IdentityOptions>(options =>
             {
                 //Hasło
+                #region Password
                 options.Password.RequiredUniqueChars = 0;
                 options.Password.RequireUppercase = false;
                 options.Password.RequireLowercase = false;
+                #endregion
 
                 //Zablokowanie
                 options.Lockout.MaxFailedAccessAttempts = 3;
