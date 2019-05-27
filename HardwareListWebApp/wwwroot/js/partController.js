@@ -76,7 +76,7 @@
 
         var intervalId = window.setInterval(function () {
             _this._service.getLoop()
-        }, 6000)
+        }, 2000)
     }
 }
 

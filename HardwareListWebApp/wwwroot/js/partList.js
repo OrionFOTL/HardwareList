@@ -141,7 +141,11 @@
             },
 
             // Configuration options go here
-            options: {}
+            options: {
+                animation: {
+                    duration: 0
+                }
+            }
         });
 
     }
