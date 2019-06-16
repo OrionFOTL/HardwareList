@@ -3,36 +3,44 @@
     ViewData["Title"] = "CPU";
 }
 
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
+
 <h1>CPU</h1>
 
 
-<div class="row">
-    <div class="form-group col">
-        <label for="cpu_vendorSelect">Vendor</label>
-        <select class="form-control" id="cpu_vendorSelect">
-            <option>Intel</option>
-            <option>AMD</option>
-        </select>
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="row">
+        <div class="form-group col">
+            <label for="cpu_vendorSelect">Vendor</label>
+            <select class="form-control" id="cpu_vendorSelect">
+                <option>Intel</option>
+                <option>AMD</option>
+            </select>
 
-        <label for="cpu_modelInput">Model</label>
-        <input type="text" class="form-control" id="cpu_modelInput" placeholder="i5-9600K" />
-    </div>
-    <div class="form-group col">
-        <label for="cpu_frequencyInput">Your frequency after overclocking, in GHz</label>
-        <input type="number" step="0.001" class="form-control" id="cpu_frequencyInput" placeholder="4.987" />
+            <label for="cpu_modelInput">Model</label>
+            <input type="text" class="form-control" id="cpu_modelInput" placeholder="i5-9600K" />
+        </div>
+        <div class="form-group col">
+            <label for="cpu_frequencyInput">Your frequency after overclocking, in MHz</label>
+            <input type="number" step="1" class="form-control" id="cpu_frequencyInput" placeholder="4987" />
 
-        <label for="cpu_voltageInput">Core voltage</label>
-        <input type="number" step="0.001" class="form-control" id="cpu_voltageInput" placeholder="1.405" />
-    </div>
-    <div class="form-group col">
-        <label for="cpu_cinesingleInput">Cinebench Single Core score</label>
-        <input type="number" class="form-control" id="cpu_cinesingleInput" placeholder="14000" />
+            <label for="cpu_voltageInput">Core voltage</label>
+            <input type="number" step="0.001" class="form-control" id="cpu_voltageInput" placeholder="1.405" />
+        </div>
+        <div class="form-group col">
+            <label for="cpu_cinesingleInput">Cinebench Single Core score</label>
+            <input type="number" class="form-control" id="cpu_cinesingleInput" placeholder="14000" />
 
-        <label for="cpu_cinemultiInput">Cinebench Multi Core score</label>
-        <input type="number" class="form-control" id="cpu_cinemultiInput" placeholder="21500" />
+            <label for="cpu_cinemultiInput">Cinebench Multi Core score</label>
+            <input type="number" class="form-control" id="cpu_cinemultiInput" placeholder="21500" />
+        </div>
     </div>
-</div>
-<button type="button" class="btn btn-primary" id="cpu_addBtn">Add</button>
+    <button type="button" class="btn btn-primary" id="cpu_addBtn">Add</button>
+    <button type="button" class="btn btn-primary d-none" id="cpu_saveBtn">Save</button>
+    <button type="button" class="btn btn-primary d-none" id="cpu_cancelBtn">Cancel</button>
+}
 <script src="~/js/addPartForm.js" asp-append-version="true"></script>
 
 <div class="container" id="cpu_container">
@@ -56,33 +64,53 @@
             CR15 Multicore
         </div>
         <div class="col-sm">
+            @*Empty column for edit button*@
+        </div>
+        <div class="col-sm">
             @*Empty column for remove button*@
         </div>
+
     </div>
-    <div class="row d-none">
+    <div class="row d-none" data-row-type="template" data-internal-id="">
+        <div class="col-sm d-none" data-column-type="id">
+
+        </div>
         <div class="col-sm" data-column-type="vendor">
-            
+
         </div>
         <div class="col-sm" data-column-type="model">
-            
+
         </div>
         <div class="col-sm" data-column-type="frequency">
-            
+
         </div>
         <div class="col-sm" data-column-type="voltage">
-            
+
         </div>
         <div class="col-sm" data-column-type="cinesingle">
-            
+
         </div>
         <div class="col-sm" data-column-type="cinemulti">
-            
+
+        </div>
+        <div class="col-sm" data-column-type="">
+            <a href="#" data-action="edit">Edit</a>
         </div>
         <div class="col-sm" data-column-type="">
             <a href="#" data-action="remove">Remove</a>
         </div>
     </div>
-</div> 
+</div>
+<button type="button" class="btn btn-primary" id="cpu_export">PDF Export</button>
+
+<div id="chartContainer" class="container-fluid">
+    <canvas id="myChart"></canvas>
+</div>
 <script src="~/js/partList.js" asp-append-version="true"></script>
 <script src="~/js/partService.js" asp-append-version="true"></script>
 <script src="~/js/partController.js" asp-append-version="true"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+<script src="~/js/export.js" asp-append-version="true"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>

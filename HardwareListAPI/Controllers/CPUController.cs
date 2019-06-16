@@ -84,7 +84,7 @@ namespace HardwareListAPI.Controllers
 
         // DELETE: api/CPU/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<CPU>> DeleteCPU(int id)
+        public async Task<IActionResult> DeleteCPU(int id)
         {
             var cPU = await _context.CPUs.FindAsync(id);
             if (cPU == null)
@@ -95,7 +95,7 @@ namespace HardwareListAPI.Controllers
             _context.CPUs.Remove(cPU);
             await _context.SaveChangesAsync();
 
-            return cPU;
+            return NoContent();
         }
 
         private bool CPUExists(int id)
